@@ -13,9 +13,5 @@
     on:click={event}
 >
     <slot name="icon" />
-    {#if $$slots.icon}
-        <span class="ml-3">{text}</span>
-    {:else}
-        <span>{text}</span>
-    {/if}
+    <span>{text}</span>
 </button>

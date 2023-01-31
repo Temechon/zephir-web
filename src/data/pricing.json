@@ -1,0 +1,40 @@
+{
+    "web": {
+        "free": [
+            {
+                "icon": "check",
+                "text": "Vos données sont stockées dans votre navigateur internet, sur un seul poste."
+            },
+            {
+                "icon": "check",
+                "text": "Utilisable hors ligne."
+            },
+            {
+                "icon": "check",
+                "text": "Toutes les fonctionnalités sont disponibles."
+            },
+            {
+                "icon": "ban",
+                "text": "Pas de synchronisation de données."
+            }
+        ],
+        "synchro": [
+            {
+                "icon": "check",
+                "text": "Vos données sont stockées dans votre navigateur internet et répliquées en base de donnée distante"
+            },
+            {
+                "icon": "check",
+                "text": "Utilisable hors ligne."
+            },
+            {
+                "icon": "check",
+                "text": "Toutes les fonctionnalités sont disponibles."
+            },
+            {
+                "icon": "check",
+                "text": "Synchronisation des données multi-appareil"
+            }
+        ]
+    }
+}
