@@ -1,21 +1,30 @@
 <script lang="ts">
-    import {
-        faB,
-        faBan,
-        faCheckCircle,
-    } from "@fortawesome/free-solid-svg-icons";
+    import { faBan, faCheckCircle } from "@fortawesome/free-solid-svg-icons";
     import { Icon } from "svelte-awesome";
 
     export let price = "";
+    export let subprice = "";
     export let baseline = "";
+    export let color = "";
     export let args: Array<{ icon: string; text: string }> = [];
 </script>
 
 <!-- Price block - sans synchro-->
 <div class=" w-1/4 rounded-md border-8 h-[460px]">
-    <div class="bg-primary-500 text-white py-4">
+    <div
+        class:bg-primary-500={color === "blue"}
+        class:bg-secondary={color === "red"}
+        class="text-white py-4"
+    >
         <h2 class="text-center text-2xl font-light">{baseline}</h2>
-        <h3 class="text-center text-5xl mt-4 font-semibold">{price}</h3>
+        {#if subprice}
+            <div class="flex items-center justify-center mt-4  font-semibold">
+                <h3 class="text-5xl">{price}</h3>
+                <h4 class="text-2xl ml-2">+ {subprice}</h4>
+            </div>
+        {:else}
+            <h3 class="text-center text-5xl mt-4 font-semibold">{price}</h3>
+        {/if}
     </div>
 
     <table class="w-5/6 m-auto my-4">

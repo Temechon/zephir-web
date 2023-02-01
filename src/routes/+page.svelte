@@ -17,6 +17,8 @@
     import Divider from "../gui/divider.svelte";
     import Priceblock from "../gui/priceblock.svelte";
     import pricing from "../data/pricing.json";
+
+    let showweb = true;
 </script>
 
 <svelte:head>
@@ -266,23 +268,54 @@
             Choisissez comment vous voulez l'utiliser
         </h1>
         <div class="flex flex-row items-center justify-center gap-10">
-            <Button text="Mode web" />
-            <Button text="Mode exécutable" />
+            <Button
+                text="Mode web"
+                event={() => {
+                    showweb = true;
+                    console.log(showweb);
+                }}
+                active={showweb}
+            />
+            <Button
+                text="Mode exécutable"
+                event={() => (showweb = false)}
+                active={!showweb}
+                color="blue"
+            />
         </div>
 
         <!-- Pricing -->
         <div class="flex flex-row items-center justify-center gap-10 mt-12">
-            <Priceblock
-                baseline="Sans synchronisation"
-                price="Gratuit"
-                args={pricing.web.free}
-            />
-            <!-- Price block - avec synchro -->
-            <Priceblock
-                baseline="Avec synchronisation"
-                price="6€/mois"
-                args={pricing.web.synchro}
-            />
+            {#if showweb}
+                <Priceblock
+                    baseline="Sans synchronisation"
+                    price="Gratuit"
+                    args={pricing.web.free}
+                    color="red"
+                />
+                <!-- Price block - avec synchro -->
+                <Priceblock
+                    baseline="Avec synchronisation"
+                    price="6€/mois"
+                    args={pricing.web.synchro}
+                    color="red"
+                />
+            {:else}
+                <Priceblock
+                    baseline="Sans synchronisation"
+                    price="30€"
+                    args={pricing.standalone.nosync}
+                    color="blue"
+                />
+                <!-- Price block - avec synchro -->
+                <Priceblock
+                    baseline="Avec synchronisation"
+                    price="0€"
+                    subprice="8€/mois"
+                    args={pricing.standalone.sync}
+                    color="blue"
+                />
+            {/if}
         </div>
     </section>
 </div>

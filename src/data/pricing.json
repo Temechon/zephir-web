@@ -36,5 +36,43 @@
                 "text": "Synchronisation des données multi-appareil"
             }
         ]
+    },
+    "standalone": {
+        "nosync": [
+            {
+                "icon": "check",
+                "text": "Vos données sont stockées sur votre PC."
+            },
+            {
+                "icon": "check",
+                "text": "Utilisable hors ligne : aucune connexion à internet nécessaire"
+            },
+            {
+                "icon": "check",
+                "text": "Toutes les fonctionnalités sont disponibles."
+            },
+            {
+                "icon": "ban",
+                "text": "Pas de synchronisation de données."
+            }
+        ],
+        "sync": [
+            {
+                "icon": "check",
+                "text": "Vos données sont stockées sur votre PC."
+            },
+            {
+                "icon": "check",
+                "text": "Utilisable hors ligne : aucune connexion à internet nécessaire"
+            },
+            {
+                "icon": "check",
+                "text": "Toutes les fonctionnalités sont disponibles."
+            },
+            {
+                "icon": "check",
+                "text": "Synchronisation des données multi-appareil"
+            }
+        ]
     }
 }
