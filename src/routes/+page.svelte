@@ -2,23 +2,27 @@
     import {
         faBolt,
         faCalendarAlt,
-        faCheckCircle,
         faColumns,
         faDashboard,
+        faDiagramProject,
         faFileAlt,
         faFlag,
+        faFlask,
         faLink,
         faSearch,
         faWifi,
     } from "@fortawesome/free-solid-svg-icons";
     import Icon from "svelte-awesome";
     import "../app.css";
+    import pricing from "../data/pricing.json";
     import Button from "../gui/button.svelte";
     import Divider from "../gui/divider.svelte";
     import Priceblock from "../gui/priceblock.svelte";
-    import pricing from "../data/pricing.json";
 
     let showweb = true;
+
+    // TODO
+    // https://github.com/kaisermann/svelte-i18n/blob/main/docs/Svelte-Kit.md
 </script>
 
 <svelte:head>
@@ -34,7 +38,7 @@
             class="flex flex-col sm:flex-row items-center justify-around lg:justify-center"
         >
             <!-- Logo -->
-            <img class="w-96 mb-4" src="logo.png" alt="" srcset="" />
+            <img class="w-96 mb-4" src="logo.png" alt="logo zephir" srcset="" />
 
             <!-- Top menu -->
             <div
@@ -59,7 +63,7 @@
 
             <div class="py-2 min-w-fit">
                 <Button text="Testez gratuitement !">
-                    <Icon data={faBolt} slot="icon" class="mr-2" />
+                    <Icon data={faFlask} slot="icon" class="mr-2" />
                 </Button>
             </div>
         </div>
@@ -87,12 +91,9 @@
                 >
             </h2>
             <div class="text-center">
-                <Button text="Testez maintenant !">
-                    <Icon data={faBolt} slot="icon" class="mr-2" />
+                <Button text="Aller voir les fonctionnalités">
+                    <Icon data={faDiagramProject} slot="icon" class="mr-2" />
                 </Button>
-                <div class="italic text-gray-400 mt-2">
-                    Et sans inscription !
-                </div>
             </div>
         </div>
         <!-- Image -->
@@ -292,11 +293,13 @@
                     price="Gratuit"
                     args={pricing.web.free}
                     color="red"
+                    cta="Tester maintenant !"
+                    url="https://app.zephir.pm"
                 />
                 <!-- Price block - avec synchro -->
                 <Priceblock
                     baseline="Avec synchronisation"
-                    price="6€/mois"
+                    subprice="à venir..."
                     args={pricing.web.synchro}
                     color="red"
                 />
@@ -306,18 +309,45 @@
                     price="30€"
                     args={pricing.standalone.nosync}
                     color="blue"
+                    cta="Acheter !"
                 />
                 <!-- Price block - avec synchro -->
                 <Priceblock
                     baseline="Avec synchronisation"
-                    price="0€"
-                    subprice="8€/mois"
+                    subprice="à venir..."
                     args={pricing.standalone.sync}
                     color="blue"
                 />
             {/if}
         </div>
     </section>
+    <Divider />
+
+    <section class="w-5/6 m-auto">
+        <h1 class="text-center text-4xl font-semibold mb-12">
+            Foire aux questions
+        </h1>
+
+        <ul>
+            <li class="border-navy-100 py-8 border-b">
+                <div class="text-2xl font-semibold mb-4">Question</div>
+                <div class="text-lg">réponse</div>
+            </li>
+            <li class="border-navy-100 py-8 border-b">
+                <div class="text-2xl font-semibold mb-4">Question</div>
+                <div class="text-lg">réponse</div>
+            </li>
+            <li class="border-navy-100 py-8 border-b">
+                <div class="text-2xl font-semibold mb-4">Question</div>
+                <div class="text-lg">réponse</div>
+            </li>
+        </ul>
+    </section>
 </div>
 
-<footer class="bg-darker h-52 mt-24" />
+<footer class="bg-darker h-52 mt-24 py-12">
+    <div class="flex w-5/6 m-auto flex-row items-center justify-evenly">
+        <img class="w-96" src="logo_white.png" alt="logo zephir" srcset="" />
+        <div class="text-white/75">Application créée par Julian Chenard</div>
+    </div>
+</footer>

@@ -21,7 +21,7 @@
         "synchro": [
             {
                 "icon": "check",
-                "text": "Vos données sont stockées dans votre navigateur internet et répliquées en base de donnée distante"
+                "text": "Vos données sont stockées dans votre navigateur internet <b>et répliquées en base de donnée distante</b>"
             },
             {
                 "icon": "check",
@@ -33,7 +33,7 @@
             },
             {
                 "icon": "check",
-                "text": "Synchronisation des données multi-appareil"
+                "text": "<b>Synchronisation des données multi-appareil</b>"
             }
         ]
     },
@@ -45,7 +45,7 @@
             },
             {
                 "icon": "check",
-                "text": "Utilisable hors ligne : aucune connexion à internet nécessaire"
+                "text": "Utilisable hors ligne : aucune connexion à internet nécessaire."
             },
             {
                 "icon": "check",
@@ -59,11 +59,11 @@
         "sync": [
             {
                 "icon": "check",
-                "text": "Vos données sont stockées sur votre PC."
+                "text": "Vos données sont stockées dans votre navigateur internet <b>et répliquées en base de donnée distante</b>"
             },
             {
                 "icon": "check",
-                "text": "Utilisable hors ligne : aucune connexion à internet nécessaire"
+                "text": "Utilisable hors ligne : aucune connexion à internet nécessaire."
             },
             {
                 "icon": "check",
