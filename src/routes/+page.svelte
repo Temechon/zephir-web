@@ -18,8 +18,17 @@
     import Button from "../gui/button.svelte";
     import Divider from "../gui/divider.svelte";
     import Priceblock from "../gui/priceblock.svelte";
+    import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
 
     let showweb = true;
+
+    function scrollto(anchorid: string) {
+        const anchor = document.getElementById(anchorid);
+        window.scrollTo({
+            top: anchor?.offsetTop,
+            behavior: "smooth",
+        });
+    }
 
     // TODO
     // https://github.com/kaisermann/svelte-i18n/blob/main/docs/Svelte-Kit.md
@@ -44,27 +53,49 @@
             <div
                 class="ml-auto w-1/2 flex-row justify-evenly items-center hidden lg:flex"
             >
-                <div
-                    class="cursor-pointer transition-all duration-200 font-light text-xl hover:text-primary-500 hover:border-primary-500 border-transparent border-b-4 py-2"
+                <a
+                    href="#"
+                    on:click={() => scrollto("features")}
+                    aria-label="features"
                 >
-                    Fonctionnalités
-                </div>
-                <div
-                    class="cursor-pointer transition-all duration-200 font-light text-xl hover:text-primary-500 hover:border-primary-500 border-transparent border-b-4 py-2"
+                    <div
+                        class="cursor-pointer transition-all duration-200 font-light text-xl hover:text-primary-500 hover:border-primary-500 border-transparent border-b-4 py-2"
+                    >
+                        Fonctionnalités
+                    </div>
+                </a>
+                <a
+                    href="#"
+                    on:click={() => scrollto("pricing")}
+                    aria-label="pricing"
                 >
-                    Pricing
-                </div>
-                <div
-                    class="cursor-pointer transition-all duration-200 font-light text-xl hover:text-primary-500 hover:border-primary-500 border-transparent border-b-4 py-2"
-                >
-                    FAQ
-                </div>
+                    <div
+                        class="cursor-pointer transition-all duration-200 font-light text-xl hover:text-primary-500 hover:border-primary-500 border-transparent border-b-4 py-2"
+                    >
+                        Pricing
+                    </div>
+                </a>
+
+                <a href="#" on:click={() => scrollto("faq")} aria-label="faq">
+                    <div
+                        class="cursor-pointer transition-all duration-200 font-light text-xl hover:text-primary-500 hover:border-primary-500 border-transparent border-b-4 py-2"
+                    >
+                        FAQ
+                    </div>
+                </a>
             </div>
 
             <div class="py-2 min-w-fit">
-                <Button text="Testez gratuitement !">
-                    <Icon data={faFlask} slot="icon" class="mr-2" />
-                </Button>
+                <a
+                    href="https://app.zephir.pm/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Zephir free version"
+                >
+                    <Button text="Testez gratuitement !">
+                        <Icon data={faFlask} slot="icon" class="mr-2" />
+                    </Button>
+                </a>
             </div>
         </div>
     </div>
@@ -79,9 +110,12 @@
                 <span class="text-primary-500">à un seul endroit !</span>
             </h1>
             <div class="mb-8 text-xl text-justify">
-                Vos comptes rendus, vos jalons, la liste de vos interlocuteurs,
-                vos identifiants de connexion, les tâches à faire, la
-                documentation, les actions à suivre...
+                Zephir est un <b
+                    >outil de suivi de portefeuille projets ultra rapide</b
+                > qui permet de stocker toutes les informations liées à vos projets
+                : vos comptes rendus, vos jalons, la liste de vos interlocuteurs,
+                vos identifiants de connexion, les tâches à faire, la documentation,
+                les actions à suivre...
             </div>
 
             <h2 class="font-semibold text-3xl uppercase mb-8">
@@ -91,9 +125,19 @@
                 >
             </h2>
             <div class="text-center">
-                <Button text="Aller voir les fonctionnalités">
-                    <Icon data={faDiagramProject} slot="icon" class="mr-2" />
-                </Button>
+                <a
+                    href="#"
+                    on:click={() => scrollto("features")}
+                    aria-label="features"
+                >
+                    <Button text="Aller voir les fonctionnalités">
+                        <Icon
+                            data={faDiagramProject}
+                            slot="icon"
+                            class="mr-2"
+                        />
+                    </Button>
+                </a>
             </div>
         </div>
         <!-- Image -->
@@ -154,14 +198,14 @@
     </section>
 
     <Divider />
-    <section class="w-5/6 m-auto">
+    <section class="w-5/6 m-auto" id="features">
         <h1 class="text-center text-4xl font-semibold mb-12">
             Un outil ultra rapide qui vous fait gagner du temps
         </h1>
         <div class="grid grid-cols-3 gap-4">
             <!-- Item -->
             <div class="flex items-center flex-col p-4">
-                <Icon data={faFileAlt} scale="3" class="text-primary mb-4" />
+                <Icon data={faFileAlt} scale={3} class="text-primary mb-4" />
                 <h2 class="font-semibold text-xl mb-4">Comptes rendus</h2>
                 <p class="text-justify text-lg">
                     Rédigez des comptes-rendus de réunions directement dans
@@ -173,7 +217,7 @@
             </div>
             <!-- Item -->
             <div class="flex items-center flex-col p-4">
-                <Icon data={faBolt} scale="3" class="text-primary mb-4" />
+                <Icon data={faBolt} scale={3} class="text-primary mb-4" />
                 <h2 class="font-semibold text-xl mb-4">
                     Liste des actions en cours
                 </h2>
@@ -186,7 +230,7 @@
             </div>
             <!-- Item -->
             <div class="flex items-center flex-col p-4">
-                <Icon data={faFlag} scale="3" class="text-primary mb-4" />
+                <Icon data={faFlag} scale={3} class="text-primary mb-4" />
                 <h2 class="font-semibold text-xl mb-4">Jalons</h2>
                 <p class="text-justify text-lg">
                     Définissez des étapes clés pour votre projet, comme les
@@ -196,7 +240,7 @@
             </div>
             <!-- Item -->
             <div class="flex items-center flex-col p-4">
-                <Icon data={faWifi} scale="3" class="text-primary mb-4" />
+                <Icon data={faWifi} scale={3} class="text-primary mb-4" />
                 <h2 class="font-semibold text-xl mb-4">Utilisable offline</h2>
                 <p class="text-justify text-lg">
                     Avec Zephir, les données liées à vos projets sont
@@ -209,7 +253,7 @@
             </div>
             <!-- Item -->
             <div class="flex items-center flex-col p-4">
-                <Icon data={faSearch} scale="3" class="text-primary mb-4" />
+                <Icon data={faSearch} scale={3} class="text-primary mb-4" />
                 <h2 class="font-semibold text-xl mb-4">Recherche transverse</h2>
                 <p class="text-justify text-lg">
                     Trouvez rapidement les informations que vous recherchez
@@ -219,7 +263,7 @@
             </div>
             <!-- Item -->
             <div class="flex items-center flex-col p-4">
-                <Icon data={faLink} scale="3" class="text-primary mb-4" />
+                <Icon data={faLink} scale={3} class="text-primary mb-4" />
                 <h2 class="font-semibold text-xl mb-4">Liens utiles</h2>
                 <p class="text-justify text-lg">
                     Accédez rapidement et facilement à tous les documents et les
@@ -229,7 +273,7 @@
             </div>
             <!-- Item -->
             <div class="flex items-center flex-col p-4">
-                <Icon data={faColumns} scale="3" class="text-primary mb-4" />
+                <Icon data={faColumns} scale={3} class="text-primary mb-4" />
                 <h2 class="font-semibold text-xl mb-4">Tableau Kanban</h2>
                 <p class="text-justify text-lg">
                     Toutes vos tâches à faire sont triées dans un tableau kanban
@@ -239,7 +283,7 @@
             </div>
             <!-- Item -->
             <div class="flex items-center flex-col p-4">
-                <Icon data={faDashboard} scale="3" class="text-primary mb-4" />
+                <Icon data={faDashboard} scale={3} class="text-primary mb-4" />
                 <h2 class="font-semibold text-xl mb-4">Tableau de bord</h2>
                 <p class="text-justify text-lg">
                     Pour chaque projet, un tableau de bord résume ce que vous
@@ -251,7 +295,7 @@
             <div class="flex items-center flex-col p-4">
                 <Icon
                     data={faCalendarAlt}
-                    scale="3"
+                    scale={3}
                     class="text-primary mb-4"
                 />
                 <h2 class="font-semibold text-xl mb-4">Calendrier global</h2>
@@ -264,7 +308,7 @@
     </section>
     <Divider />
 
-    <section class="w-5/6 m-auto">
+    <section class="w-5/6 m-auto" id="pricing">
         <h1 class="text-center text-4xl font-semibold mb-12">
             Choisissez comment vous voulez l'utiliser
         </h1>
@@ -286,7 +330,7 @@
         </div>
 
         <!-- Pricing -->
-        <div class="flex flex-row items-center justify-center gap-10 mt-12">
+        <div class="flex flex-row items-start justify-center gap-10 mt-12">
             {#if showweb}
                 <Priceblock
                     baseline="Sans synchronisation"
@@ -323,31 +367,47 @@
     </section>
     <Divider />
 
-    <section class="w-5/6 m-auto">
+    <section class="w-5/6 m-auto" id="faq">
         <h1 class="text-center text-4xl font-semibold mb-12">
             Foire aux questions
         </h1>
 
         <ul>
             <li class="border-navy-100 py-8 border-b">
-                <div class="text-2xl font-semibold mb-4">Question</div>
+                <div class="text-2xl font-semibold mb-4">
+                    C'est quoi Zephir ?
+                </div>
                 <div class="text-lg">réponse</div>
             </li>
             <li class="border-navy-100 py-8 border-b">
-                <div class="text-2xl font-semibold mb-4">Question</div>
+                <div class="text-2xl font-semibold mb-4">
+                    Comment ça marche ?
+                </div>
                 <div class="text-lg">réponse</div>
             </li>
             <li class="border-navy-100 py-8 border-b">
-                <div class="text-2xl font-semibold mb-4">Question</div>
+                <div class="text-2xl font-semibold mb-4">
+                    Je pourrais utiliser OneNote/Evernote/Notion pour faire la
+                    même chose...
+                </div>
                 <div class="text-lg">réponse</div>
             </li>
         </ul>
     </section>
 </div>
 
-<footer class="bg-darker h-52 mt-24 py-12">
+<footer class="bg-darker mt-24 py-12">
     <div class="flex w-5/6 m-auto flex-row items-center justify-evenly">
         <img class="w-96" src="logo_white.png" alt="logo zephir" srcset="" />
-        <div class="text-white/75">Application créée par Julian Chenard</div>
+        <div class="text-white/80 hover:text-white">
+            <a
+                href="https://www.linkedin.com/in/julian-chenard/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Linkedin"
+            >
+                <Icon data={faLinkedin} scale={2} />
+            </a>
+        </div>
     </div>
 </footer>
