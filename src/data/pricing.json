@@ -3,11 +3,11 @@
         "free": [
             {
                 "icon": "check",
-                "text": "Vos données sont stockées dans votre navigateur internet, sur un seul poste."
+                "text": "Vos données sont stockées dans le cache de votre navigateur internet, sur un seul poste."
             },
             {
                 "icon": "check",
-                "text": "Utilisable hors ligne."
+                "text": "Utilisable hors ligne : aucune connexion à internet nécessaire."
             },
             {
                 "icon": "check",
@@ -15,7 +15,11 @@
             },
             {
                 "icon": "ban",
-                "text": "Pas de synchronisation de données."
+                "text": "Pas de synchronisation de données : vos données restent uniquement dans votre navigateur internet."
+            },
+            {
+                "icon": "check",
+                "text": "Mises à jour automatiques"
             }
         ],
         "synchro": [
@@ -25,7 +29,7 @@
             },
             {
                 "icon": "check",
-                "text": "Utilisable hors ligne."
+                "text": "Utilisable hors ligne : aucune connexion à internet nécessaire."
             },
             {
                 "icon": "check",
@@ -33,7 +37,11 @@
             },
             {
                 "icon": "check",
-                "text": "<b>Synchronisation des données multi-appareil</b>"
+                "text": "<b>Synchronisation des données multi-appareil</b> : vos données peuvent être accédées sur plusieurs postes."
+            },
+            {
+                "icon": "check",
+                "text": "Mises à jour automatiques"
             }
         ]
     },
@@ -41,7 +49,7 @@
         "nosync": [
             {
                 "icon": "check",
-                "text": "Vos données sont stockées sur votre PC."
+                "text": "Vos données sont stockées sur votre PC, dans une base de données indépendante de votre navigateur internet."
             },
             {
                 "icon": "check",
@@ -53,13 +61,17 @@
             },
             {
                 "icon": "ban",
-                "text": "Pas de synchronisation de données."
+                "text": "Pas de synchronisation de données : vos données restent uniquement dans Zephir, sur votre PC."
+            },
+            {
+                "icon": "ban",
+                "text": "Pas de mise à jour automatiques"
             }
         ],
         "sync": [
             {
                 "icon": "check",
-                "text": "Vos données sont stockées dans votre navigateur internet <b>et répliquées en base de donnée distante</b>"
+                "text": "Vos données sont stockées sur votre PC, dans une base de données indépendante de votre navigateur internet <b>et répliquées en base de donnée distante</b>"
             },
             {
                 "icon": "check",
@@ -71,7 +83,11 @@
             },
             {
                 "icon": "check",
-                "text": "Synchronisation des données multi-appareil"
+                "text": "<b>Synchronisation des données multi-appareil</b> : vos données sont en toute sécurité."
+            },
+            {
+                "icon": "ban",
+                "text": "Pas de mise à jour automatiques"
             }
         ]
     }

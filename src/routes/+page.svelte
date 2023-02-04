@@ -111,11 +111,12 @@
             </h1>
             <div class="mb-8 text-xl text-justify">
                 Zephir est un <b
-                    >outil de suivi de portefeuille projets ultra rapide</b
+                    >outil de suivi de portefeuille projets ultra réactif</b
                 > qui permet de stocker toutes les informations liées à vos projets
                 : vos comptes rendus, vos jalons, la liste de vos interlocuteurs,
                 vos identifiants de connexion, les tâches à faire, la documentation,
-                les actions à suivre...
+                les actions à suivre... Ne vous demandez plus où chercher les informations,
+                tout est là.
             </div>
 
             <h2 class="font-semibold text-3xl uppercase mb-8">
@@ -369,7 +370,7 @@
 
     <section class="w-5/6 m-auto" id="faq">
         <h1 class="text-center text-4xl font-semibold mb-12">
-            Foire aux questions
+            Questions fréquentes
         </h1>
 
         <ul>
@@ -377,20 +378,56 @@
                 <div class="text-2xl font-semibold mb-4">
                     C'est quoi Zephir ?
                 </div>
-                <div class="text-lg">réponse</div>
+                <div class="text-lg">
+                    <p>
+                        Zephir Project Manager est un outil de suivi de projets.
+                        Il permet de stocker de manière centralisée toutes les
+                        informations importantes, telles que les tâches à
+                        accomplir, les actions en cours, les comptes rendus de
+                        réunions, les liens utiles, et les acteurs impliqués
+                        dans vos projet. <br /> Il est designé pour être ultra rapide,
+                        réactif et sans bug.
+                    </p>
+                </div>
             </li>
             <li class="border-navy-100 py-8 border-b">
                 <div class="text-2xl font-semibold mb-4">
                     Comment ça marche ?
                 </div>
-                <div class="text-lg">réponse</div>
-            </li>
-            <li class="border-navy-100 py-8 border-b">
-                <div class="text-2xl font-semibold mb-4">
-                    Je pourrais utiliser OneNote/Evernote/Notion pour faire la
-                    même chose...
+                <div class="text-lg">
+                    <p>
+                        Avec Zephir, l'ensemble de vos données est stockée dans
+                        la base de données du navigateur (appelée Indexed DB).<br
+                        />
+                        L'avantage de ce système est triple :
+                    </p>
+                    <ol class="list-decimal px-12 my-4">
+                        <li>
+                            Vos données ne quittent <b>jamais</b> votre PC, sauf
+                            si la synchronisation est activée
+                        </li>
+                        <li>
+                            Elles sont entièrement accessibles hors-ligne. Cela
+                            veut dire que Zephir PM, une fois chargée dans votre
+                            navigateur, peut fonctionner entièrement sans
+                            connexion internet
+                        </li>
+                        <li>
+                            Les échanges avec Indexed DB sont très rapides. De
+                            fait, l'application est ultra réactive : pas besoin
+                            de bouton "sauvegarder", tout est sauvegardé en
+                            continu
+                        </li>
+                    </ol>
+                    <p>
+                        Evidemment, il y a quelques inconvénients : sans
+                        synchronisation, et si le cache de votre navigateur est
+                        vidé, vos données sont effacées avec. <br />
+                        Heureusement, en mode exécutable, Zephir PM dispose de son
+                        propre cache indépendant de votre navigateur web. Pas de
+                        risque de perdre vos données !
+                    </p>
                 </div>
-                <div class="text-lg">réponse</div>
             </li>
         </ul>
     </section>

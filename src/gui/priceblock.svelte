@@ -13,7 +13,7 @@
 </script>
 
 <!-- Price block - sans synchro-->
-<div class="w-1/4 rounded-md border-8 min-h-[510px]">
+<div class="w-1/3 rounded-md border-8 min-h-[600px]">
     <div
         class:bg-primary-500={color === "blue"}
         class:bg-secondary={color === "red"}

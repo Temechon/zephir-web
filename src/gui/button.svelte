@@ -18,7 +18,7 @@
 </script>
 
 <button
-    class="{active_class} bg-white hover:drop-shadow-xl cursor-pointer drop-shadow-md border px-4 text-lg py-2 rounded-md text-white"
+    class="{active_class} bg-white hover:drop-shadow-xl cursor-pointer drop-shadow-md border px-4 text-lg py-2 rounded-md"
     on:click={event}
 >
     <slot name="icon" />
