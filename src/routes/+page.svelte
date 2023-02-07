@@ -355,6 +355,7 @@
                     args={pricing.standalone.nosync}
                     color="blue"
                     cta="Acheter !"
+                    url="https://pixelcodr.lemonsqueezy.com/checkout/buy/2bcea2b0-06e2-4e6e-a524-1fd2f7b84a6a?discount=0"
                 />
                 <!-- Price block - avec synchro -->
                 <Priceblock
