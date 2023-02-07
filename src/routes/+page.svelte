@@ -40,7 +40,7 @@
 
 <div class="h-1 bg-gradient-to-r from-darker to-[#0697F2]" />
 
-<div class="w-5/6 m-auto px-12">
+<div class="w-5/6 m-auto">
     <!-- Header -->
     <div class="mt-12 sm:mb-16 w-5/6 mx-auto px-4 lg:px-0">
         <div
@@ -101,10 +101,10 @@
     </div>
 
     <!-- First section -->
-    <section class="flex flex-col items-center lg:flex-row m-auto">
+    <section class="flex flex-col items-center 2xl:flex-row m-auto md:px-12">
         <!-- Text -->
-        <div class="w-full lg:w-1/2 p-12 pr-24">
-            <h1 class="font-extrabold text-5xl mb-8">
+        <div class="w-full 2xl:w-1/2 2xl:p-12 2xl:pr-24 p-4">
+            <h1 class="font-extrabold text-5xl mb-8 lg:text-left text-center">
                 Toutes les informations <br />
                 de vos projets
                 <span class="text-primary-500">à un seul endroit !</span>
@@ -142,7 +142,7 @@
             </div>
         </div>
         <!-- Image -->
-        <div class="w-full lg:w-1/2 md:p-12 lg:p-0">
+        <div class="w-full md:w-3/4 2xl:w-1/2 2xl:p-12">
             <img
                 src="https://placekitten.com/640/400"
                 alt=""
@@ -155,16 +155,23 @@
     <Divider />
 
     <!-- Second section -->
-    <section class="flex flex-col items-center lg:flex-row w-5/6 m-auto">
-        <div class="w-full lg:w-1/2 md:p-12 lg:p-0">
-            <img src="https://placekitten.com/600/400" alt="" srcset="" />
+    <section
+        class="flex flex-col items-center 2xl:flex-row m-auto md:px-12 xl:px-24"
+    >
+        <div class="w-full md:w-3/4 2xl:w-1/2 2xl:p-12">
+            <img
+                src="https://placekitten.com/600/400"
+                alt=""
+                srcset=""
+                class="object-cover w-full"
+            />
         </div>
         <!-- Text -->
-        <div class="w-full lg:w-1/2 text-center p-12">
-            <h1 class="font-semibold text-4xl mb-8">
-                N'oubliez plus les actions <br />en cours sur vos projets
+        <div class="w-full text-center">
+            <h1 class="font-semibold text-4xl mb-8 pt-12 2xl:pt-0 2xl:w-1/2">
+                N'oubliez plus les actions en cours sur vos projets
             </h1>
-            <p class="w-full md:w-1/2 lg:w-5/6 m-auto text-xl text-justify">
+            <p class="w-full m-auto text-xl text-justify">
                 Suivez les actions en cours dans le cadre de vos projets :
                 tâches à effectuer, demandes en attentes auprès d’un
                 prestataire, incident en cours de correction... <br />
@@ -186,11 +193,11 @@
             <img src="https://placekitten.com/600/400" alt="" srcset="" />
         </div>
         <!-- Text -->
-        <div class="w-full lg:w-1/2 text-center p-12">
+        <div class="w-full text-center p-12">
             <h2 class="font-semibold text-4xl mb-8">
                 Ayez une vue d’ensemble de votre portefeuille
             </h2>
-            <p class="w-full md:w-1/2 lg:w-5/6 m-auto text-xl text-justify">
+            <p class="w-full m-auto text-xl text-justify">
                 Ayez une vue d’ensemble sur toutes les actions de vos projets
                 via un tableau Kanban, ou trouvez rapidement les informations
                 que vous recherchez parmi TOUS les projets.
