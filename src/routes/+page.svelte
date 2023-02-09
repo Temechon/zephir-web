@@ -142,12 +142,12 @@
             </div>
         </div>
         <!-- Image -->
-        <div class="w-full md:w-3/4 2xl:w-1/2 2xl:p-12">
+        <div class="w-full md:w-3/4 2xl:w-1/2">
             <img
-                src="https://placekitten.com/640/400"
+                src="images/zephir_projectlist.png"
                 alt=""
                 srcset=""
-                class="object-cover w-full"
+                class="object-cover w-full shadow-2xl"
             />
         </div>
     </section>
@@ -158,16 +158,16 @@
     <section
         class="flex flex-col items-center xl:flex-row m-auto md:px-12 2xl:px-24"
     >
-        <div class="w-full md:w-3/4 xl:w-1/2 2xl:p-12">
+        <div class="w-full md:w-3/4 xl:w-2/3 2xl:p-12">
             <img
-                src="https://placekitten.com/600/400"
+                src="images/zephir_actionlist.png"
                 alt=""
                 srcset=""
-                class="object-cover w-full"
+                class="border shadow-2xl"
             />
         </div>
         <!-- Text -->
-        <div class="w-full xl:w-1/2 text-center xl:p-12">
+        <div class="w-full xl:w-1/3 text-center xl:p-12">
             <h1 class="font-semibold text-4xl mb-8 pt-12 xl:pt-0">
                 N'oubliez plus les actions en cours sur vos projets
             </h1>
@@ -189,11 +189,15 @@
     <section
         class="flex flex-col items-center xl:flex-row-reverse m-auto md:px-12 2xl:px-24"
     >
-        <div class="w-full md:w-3/4 xl:w-1/2 2xl:p-12">
-            <img src="https://placekitten.com/600/400" alt="" srcset="" />
+        <div class="w-full md:w-3/4 xl:w-2/3 2xl:p-12">
+            <img
+                src="images/zephir_kanban.png"
+                alt=""
+                class="border shadow-2xl"
+            />
         </div>
         <!-- Text -->
-        <div class="w-full xl:w-1/2 text-center xl:p-12">
+        <div class="w-full xl:w-1/3 text-center xl:p-12">
             <h2 class="font-semibold text-4xl mb-8 pt-12 xl:pt-0">
                 Ayez une vue d’ensemble de votre portefeuille
             </h2>
@@ -324,7 +328,7 @@
         </h1>
         <div class="flex flex-row-reverse items-center justify-center gap-10">
             <Button
-                text="Mode web"
+                text="Zephir web"
                 event={() => {
                     showweb = true;
                     console.log(showweb);
@@ -332,7 +336,7 @@
                 active={showweb}
             />
             <Button
-                text="Mode exécutable"
+                text="Zephir Desktop"
                 event={() => (showweb = false)}
                 active={!showweb}
                 color="blue"
@@ -340,6 +344,18 @@
         </div>
 
         <!-- Pricing -->
+
+        <p class="text-center 2xl:w-1/2 m-auto p-12 pb-0 text-lg italic">
+            {#if showweb}
+                Utilisez <b>Zephir en mode web</b>, avec ou sans sauvegarde de
+                vos données dans le cloud.
+            {:else}
+                Téléchargez l'éxecutable Windows <b>Zephir Desktop</b>, pour
+                créer un espace protégé sur votre PC où vos données seront
+                sauvegardées de façon sécurisée. Si vous le choisissez, il est
+                également possible de sauvegarder vos données dans le cloud.
+            {/if}
+        </p>
         <div
             class="flex lg:flex-row flex-col items-center justify-center gap-10 mt-12"
         >
@@ -397,8 +413,8 @@
                         informations importantes, telles que les tâches à
                         accomplir, les actions en cours, les comptes rendus de
                         réunions, les liens utiles, et les acteurs impliqués
-                        dans vos projet. <br /> Il est designé pour être ultra rapide,
-                        réactif et sans bug.
+                        dans vos projet. <br /> Il est designé pour être
+                        <b>ultra rapide, réactif et sans bug.</b>
                     </p>
                 </div>
             </li>
@@ -416,13 +432,14 @@
                     <ol class="list-decimal px-12 my-4">
                         <li>
                             Vos données ne quittent <b>jamais</b> votre PC, sauf
-                            si la synchronisation est activée
+                            si la synchronisation est activée.
                         </li>
                         <li>
                             Elles sont entièrement accessibles hors-ligne. Cela
-                            veut dire que Zephir PM, une fois chargée dans votre
-                            navigateur, peut fonctionner entièrement sans
-                            connexion internet
+                            veut dire que Zephir Web, une fois chargée dans
+                            votre navigateur, peut fonctionner entièrement sans
+                            connexion internet. C'est évidemment la même chose
+                            avec Zephir Desktop :)
                         </li>
                         <li>
                             Les échanges avec Indexed DB sont très rapides. De
