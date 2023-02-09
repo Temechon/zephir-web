@@ -20,7 +20,7 @@
     import Priceblock from "../gui/priceblock.svelte";
     import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
 
-    let showweb = true;
+    let showweb = false;
 
     function scrollto(anchorid: string) {
         const anchor = document.getElementById(anchorid);
@@ -104,7 +104,7 @@
     <section class="flex flex-col items-center 2xl:flex-row m-auto md:px-12">
         <!-- Text -->
         <div class="w-full 2xl:w-1/2 2xl:p-12 2xl:pr-24 p-4">
-            <h1 class="font-extrabold text-5xl mb-8 lg:text-left text-center">
+            <h1 class="font-extrabold text-5xl mb-8 2xl:text-left text-center">
                 Toutes les informations <br />
                 de vos projets
                 <span class="text-primary-500">à un seul endroit !</span>
@@ -119,7 +119,7 @@
                 tout est là.
             </div>
 
-            <h2 class="font-semibold text-3xl uppercase mb-8">
+            <h2 class="font-semibold text-3xl uppercase mb-8 text-center">
                 Laissez <span class="text-primary-500">Zephir</span> être votre
                 <span class="font-bold text-primary-500 whitespace-nowrap"
                     >seconde mémoire !</span
@@ -156,9 +156,9 @@
 
     <!-- Second section -->
     <section
-        class="flex flex-col items-center 2xl:flex-row m-auto md:px-12 xl:px-24"
+        class="flex flex-col items-center xl:flex-row m-auto md:px-12 2xl:px-24"
     >
-        <div class="w-full md:w-3/4 2xl:w-1/2 2xl:p-12">
+        <div class="w-full md:w-3/4 xl:w-1/2 2xl:p-12">
             <img
                 src="https://placekitten.com/600/400"
                 alt=""
@@ -167,8 +167,8 @@
             />
         </div>
         <!-- Text -->
-        <div class="w-full text-center">
-            <h1 class="font-semibold text-4xl mb-8 pt-12 2xl:pt-0 2xl:w-1/2">
+        <div class="w-full xl:w-1/2 text-center xl:p-12">
+            <h1 class="font-semibold text-4xl mb-8 pt-12 xl:pt-0">
                 N'oubliez plus les actions en cours sur vos projets
             </h1>
             <p class="w-full m-auto text-xl text-justify">
@@ -187,14 +187,14 @@
 
     <!-- Third section -->
     <section
-        class="flex flex-col-reverse items-center lg:flex-row-reverse w-5/6 m-auto"
+        class="flex flex-col items-center xl:flex-row-reverse m-auto md:px-12 2xl:px-24"
     >
-        <div class="w-full lg:w-1/2 md:p-12 lg:p-0">
+        <div class="w-full md:w-3/4 xl:w-1/2 2xl:p-12">
             <img src="https://placekitten.com/600/400" alt="" srcset="" />
         </div>
         <!-- Text -->
-        <div class="w-full text-center p-12">
-            <h2 class="font-semibold text-4xl mb-8">
+        <div class="w-full xl:w-1/2 text-center xl:p-12">
+            <h2 class="font-semibold text-4xl mb-8 pt-12 xl:pt-0">
                 Ayez une vue d’ensemble de votre portefeuille
             </h2>
             <p class="w-full m-auto text-xl text-justify">
@@ -206,11 +206,13 @@
     </section>
 
     <Divider />
-    <section class="w-5/6 m-auto" id="features">
+    <section class="md:px-12 xl:px-24 m-auto" id="features">
         <h1 class="text-center text-4xl font-semibold mb-12">
             Un outil ultra rapide qui vous fait gagner du temps
         </h1>
-        <div class="grid grid-cols-3 gap-4">
+        <div
+            class="grid lg:grid-cols-2 2xl:grid-cols-3 lg:gap-4 grid-cols-1 gap-2"
+        >
             <!-- Item -->
             <div class="flex items-center flex-col p-4">
                 <Icon data={faFileAlt} scale={3} class="text-primary mb-4" />
@@ -316,11 +318,11 @@
     </section>
     <Divider />
 
-    <section class="w-5/6 m-auto" id="pricing">
+    <section class="md:px-12 xl:px-24 m-auto" id="pricing">
         <h1 class="text-center text-4xl font-semibold mb-12">
             Choisissez comment vous voulez l'utiliser
         </h1>
-        <div class="flex flex-row items-center justify-center gap-10">
+        <div class="flex flex-row-reverse items-center justify-center gap-10">
             <Button
                 text="Mode web"
                 event={() => {
@@ -338,7 +340,9 @@
         </div>
 
         <!-- Pricing -->
-        <div class="flex flex-row items-start justify-center gap-10 mt-12">
+        <div
+            class="flex lg:flex-row flex-col items-center justify-center gap-10 mt-12"
+        >
             {#if showweb}
                 <Priceblock
                     baseline="Sans synchronisation"
@@ -362,7 +366,7 @@
                     args={pricing.standalone.nosync}
                     color="blue"
                     cta="Acheter !"
-                    url="https://pixelcodr.lemonsqueezy.com/checkout/buy/2bcea2b0-06e2-4e6e-a524-1fd2f7b84a6a?discount=0"
+                    url="https://pixelcodr.lemonsqueezy.com/checkout/buy/9796c5a4-130e-4908-ad4b-ccb1520eb437?logo=0&discount=0"
                 />
                 <!-- Price block - avec synchro -->
                 <Priceblock
@@ -376,7 +380,7 @@
     </section>
     <Divider />
 
-    <section class="w-5/6 m-auto" id="faq">
+    <section class="md:px-12 xl:px-24 m-auto" id="faq">
         <h1 class="text-center text-4xl font-semibold mb-12">
             Questions fréquentes
         </h1>
@@ -442,7 +446,9 @@
 </div>
 
 <footer class="bg-darker mt-24 py-12">
-    <div class="flex w-5/6 m-auto flex-row items-center justify-evenly">
+    <div
+        class="flex w-5/6 m-auto flex-col lg:flex-row items-center justify-evenly"
+    >
         <img class="w-96" src="logo_white.png" alt="logo zephir" srcset="" />
         <div class="text-white/80 hover:text-white">
             <a
