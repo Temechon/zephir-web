@@ -25,6 +25,21 @@
 	<meta property="twitter:title" content="Zephir Project Manager | Un outil de gestion de projet">
 	<meta property="twitter:description" content="Zephir est un outil de suivi de portefeuille projets ultra rapide qui permet de stocker toutes les informations liées à vos projets : vos comptes rendus, vos jalons, la liste de vos interlocuteurs, vos identifiants de connexion, les tâches à faire, la documentation, les actions à suivre...>
 	<meta property=" twitter:image" content="/assets/logo.png">
+	<!-- Matomo -->
+	<script>
+		var _paq = window._paq = window._paq || [];
+		/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+		_paq.push(['trackPageView']);
+		_paq.push(['enableLinkTracking']);
+		(function () {
+			var u = "//zephir.pm/analytics/";
+			_paq.push(['setTrackerUrl', u + 'matomo.php']);
+			_paq.push(['setSiteId', '2']);
+			var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+			g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+		})();
+	</script>
+	<!-- End Matomo Code -->
 </head>
 
 <body data-sveltekit-preload-data="hover">
